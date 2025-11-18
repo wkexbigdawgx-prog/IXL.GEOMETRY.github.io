@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Game Hub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e;
+            color: #fff;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            margin-bottom: 40px;
+        }
+
+        .game-button {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px 40px;
+            margin: 10px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 20px;
+            transition: 0.3s;
+        }
+
+        .game-button:hover {
+            background-color: #45a049;
+        }
+
+        iframe {
+            width: 90%;
+            height: 800px;
+            border: none;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>My Game Hub</h1>
+
+    <!-- Game selection buttons -->
+    <a href="#" class="game-button" onclick="loadGame('https://www.onlinegames.io/games/2024/unity/drift-king/index.html')">Drift King</a>
+    <a href="#" class="game-button" onclick="loadGame('https://example.com/game2')">Game 2</a>
+    <a href="#" class="game-button" onclick="loadGame('https://example.com/game3')">Game 3</a>
+    <a href="#" class="game-button" onclick="loadGame('https://example.com/game4')">Game 4</a>
+    <a href="#" class="game-button" onclick="loadGame('https://example.com/game5')">Game 5</a>
+
+    <!-- iframe to load selected game -->
+    <iframe id="gameFrame" src=""></iframe>
+
+    <script>
+        function loadGame(url) {
+            document.getElementById('gameFrame').src = url;
+        }
+    </script>
+</body>
+</html>
